@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorOrange"
+    tools:context="com.admin.circularrevealdemo.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:id="@+id/btn_open_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textSize="18sp"
+            android:text="搜索" />
+    </LinearLayout>
+    <include layout="@layout/layout_search"
+        android:visibility="gone"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="55dp"
+        android:transitionName="@string/btn_fab_transition_name"
+        android:src="@android:drawable/ic_dialog_email" />
+</FrameLayout>

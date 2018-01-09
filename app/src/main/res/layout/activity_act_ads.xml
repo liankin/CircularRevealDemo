@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/layout_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:transitionName="@string/btn_fab_transition_name"
+        app:backgroundTint="@color/colorAccent"
+        app:elevation="0dp"
+        app:fabSize="normal"
+        app:pressedTranslationZ="8dp"
+        tools:targetApi="21"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="广告"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        tools:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_launcher_round"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

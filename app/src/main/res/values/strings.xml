@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CircularRevealDemo</string>
+    <string name="btn_fab_transition_name">BtnFabTransition</string>
+</resources>
