@@ -112,7 +112,6 @@ public class ActAds extends AppCompatActivity {
         transition.addListener(new Transition.TransitionListener() {
             @Override
             public void onTransitionStart(Transition transition) {
-
             }
 
             @Override
