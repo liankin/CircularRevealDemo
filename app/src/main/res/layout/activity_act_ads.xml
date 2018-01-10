@@ -8,17 +8,13 @@
     android:layout_height="match_parent"
     android:background="@android:color/transparent">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btn_fab"
+    <TextView
+        android:id="@+id/btn_ads"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:transitionName="@string/btn_fab_transition_name"
-        app:backgroundTint="@color/colorAccent"
-        app:elevation="0dp"
-        app:fabSize="normal"
-        app:pressedTranslationZ="8dp"
-        tools:targetApi="21"/>
+        android:background="@drawable/bg_circul"/>
 
     <TextView
         android:id="@+id/tv_content"
@@ -31,7 +27,7 @@
         android:textSize="40sp"
         android:textStyle="bold"
         android:visibility="invisible"
-        tools:visibility="visible"/>
+        tools:visibility="gone"/>
 
     <ImageView
         android:id="@+id/img_close"

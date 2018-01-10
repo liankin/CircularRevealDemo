@@ -25,13 +25,16 @@
     </LinearLayout>
     <include layout="@layout/layout_search"
         android:visibility="gone"/>
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btn_fab"
+    <TextView
+        android:id="@+id/btn_ads"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="广告"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:transitionName="@string/btn_fab_transition_name"
         android:layout_gravity="right|bottom"
         android:layout_marginRight="25dp"
         android:layout_marginBottom="55dp"
-        android:transitionName="@string/btn_fab_transition_name"
-        android:src="@android:drawable/ic_dialog_email" />
+        android:background="@drawable/bg_circul"/>
 </FrameLayout>

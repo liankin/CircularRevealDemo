@@ -3,10 +3,7 @@ package com.admin.circularrevealdemo;
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.transition.Fade;
 import android.transition.Transition;
@@ -28,14 +25,14 @@ import butterknife.OnClick;
 
 public class ActAds extends AppCompatActivity {
 
-    @BindView(R.id.btn_fab)
-    FloatingActionButton btnFab;
     @BindView(R.id.tv_content)
     TextView tvContent;
     @BindView(R.id.img_close)
     ImageView imgClose;
     @BindView(R.id.layout_container)
     RelativeLayout layoutContainer;
+    @BindView(R.id.btn_ads)
+    TextView btnAds;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,11 +48,9 @@ public class ActAds extends AppCompatActivity {
         }
     }
 
-    @OnClick({R.id.btn_fab, R.id.img_close})
+    @OnClick({ R.id.img_close})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.btn_fab:
-                break;
             case R.id.img_close:
                 backActivity();
                 break;
@@ -102,7 +97,7 @@ public class ActAds extends AppCompatActivity {
     private void animateRevealShow() {
         GuiUtils.animateRevealShow(
                 this, layoutContainer,
-                btnFab.getWidth() / 2, R.color.colorAccent,
+                btnAds.getWidth() / 2, R.color.colorAccent,
                 new GuiUtils.OnRevealAnimationListener() {
                     @Override
                     public void onRevealHide() {
@@ -148,7 +143,7 @@ public class ActAds extends AppCompatActivity {
     public void onBackPressed() {
         GuiUtils.animateRevealHide(
                 this, layoutContainer,
-                btnFab.getWidth() / 2, R.color.colorAccent,
+                btnAds.getWidth() / 2, R.color.colorAccent,
                 new GuiUtils.OnRevealAnimationListener() {
                     @Override
                     public void onRevealHide() {

@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewAnimationUtils;
@@ -29,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
     TextView btnSearchCancel;
     @BindView(R.id.layout_search)
     LinearLayout layoutSearch;
-    @BindView(R.id.btn_fab)
-    FloatingActionButton btnFab;
+    @BindView(R.id.btn_ads)
+    TextView btnAds;
 
     private boolean isOpenSearch;
 
@@ -42,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         isOpenSearch = false;
     }
 
-    @OnClick({R.id.btn_open_search, R.id.btn_search_cancel, R.id.btn_fab})
+    @OnClick({R.id.btn_open_search, R.id.btn_search_cancel, R.id.btn_ads})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_open_search:
@@ -55,13 +54,13 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_search_cancel:
                 hideLayoutSearch();
                 break;
-            case R.id.btn_fab:
+            case R.id.btn_ads:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     ActivityOptions options =
-                            ActivityOptions.makeSceneTransitionAnimation(this, btnFab, btnFab.getTransitionName());
-                    startActivity(new Intent(MainActivity.this, ActAds.class), options.toBundle());
+                            ActivityOptions.makeSceneTransitionAnimation(this, btnAds, btnAds.getTransitionName());
+                    startActivity(new Intent(MainActivity.this, ActAds1.class), options.toBundle());
                 } else {
-                    startActivity(new Intent(MainActivity.this, ActAds.class));
+                    startActivity(new Intent(MainActivity.this, ActAds1.class));
                 }
                 break;
         }
