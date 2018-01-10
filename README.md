@@ -4,7 +4,7 @@ CircularReveal圆形动画的使用
 
 博客地址：
 --
-[CSDN博客]http://blog.csdn.net/an_nal/article/details/78923527
+[CSDN博客]http://blog.csdn.net/an_nal/article/details/79022044
 
 实现的功能：
 --
