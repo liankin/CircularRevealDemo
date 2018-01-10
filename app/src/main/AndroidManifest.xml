@@ -18,7 +18,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ActAds"/>
-        <activity android:name=".ActAds1"/>
     </application>
 
 </manifest>

@@ -58,9 +58,9 @@ public class MainActivity extends AppCompatActivity {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     ActivityOptions options =
                             ActivityOptions.makeSceneTransitionAnimation(this, btnAds, btnAds.getTransitionName());
-                    startActivity(new Intent(MainActivity.this, ActAds1.class), options.toBundle());
+                    startActivity(new Intent(MainActivity.this, ActAds.class), options.toBundle());
                 } else {
-                    startActivity(new Intent(MainActivity.this, ActAds1.class));
+                    startActivity(new Intent(MainActivity.this, ActAds.class));
                 }
                 break;
         }
